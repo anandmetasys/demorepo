@@ -1,16 +1,25 @@
 file 1
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 i am newbranch
 
 =======
 <<<<<<< HEAD
+=======
+
+>>>>>>> ef0260d (change in vs code)
 new branch added
 i have added after new branch created
 >>>>>>> 1d1f542 (updated)
 =======
 i am new branch2  22222
 >>>>>>> newbranch2
+<<<<<<< HEAD
 =======
 new branch added in second branch
 >>>>>>> newbranch2
+=======
+
+change in vs code
+>>>>>>> ef0260d (change in vs code)
