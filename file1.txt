@@ -1,2 +1,2 @@
 file 1
-new branch added
+new branch added in second branch
