@@ -1,7 +1,5 @@
 file 1
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 new branch added
 i have added after new branch created
 =======
@@ -13,3 +11,5 @@ new branch added in second branch
 =======
 i am new branch2  22222
 >>>>>>> newbranch2
+
+change in vs code
