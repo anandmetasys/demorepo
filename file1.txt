@@ -1,3 +1,7 @@
 file 1
+<<<<<<< HEAD
 i am newbranch
 
+=======
+i am new branch2  22222
+>>>>>>> newbranch2
