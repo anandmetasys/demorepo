@@ -1,7 +1,16 @@
 file 1
 <<<<<<< HEAD
+<<<<<<< HEAD
 i am newbranch
 
 =======
+<<<<<<< HEAD
+new branch added
+i have added after new branch created
+>>>>>>> 1d1f542 (updated)
+=======
 i am new branch2  22222
+>>>>>>> newbranch2
+=======
+new branch added in second branch
 >>>>>>> newbranch2
