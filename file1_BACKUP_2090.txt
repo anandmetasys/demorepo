@@ -1,0 +1,7 @@
+file 1
+<<<<<<< HEAD
+new branch added
+i have added after new branch created
+=======
+new branch added in second branch
+>>>>>>> newbranch2
