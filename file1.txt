@@ -40,3 +40,4 @@ i am new branch2  22222
 
 change in vs code
 >>>>>>> bb6c70905bcd29f38e545f4384ae3a434e6a7c49
+hi ignore
