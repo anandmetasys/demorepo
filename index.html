@@ -1,0 +1,298 @@
+<html>
+  <head>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    //Hide show
+    <script>
+      $(document).ready(function () {
+        $("#hide").click(function () {
+          $("p").hide();
+        });
+        $("#show").click(function () {
+          $("p").show();
+        });
+      });
+    </script>
+
+    <!--Call back function -->
+    <script>
+      $(document).ready(function () {
+        $("#callbackfunc").click(function () {
+          $("#parcall").hide("slow", function () {
+            alert("The paragraph is now hidden");
+          });
+        });
+      });
+    </script>
+
+    <!--side up toggle -->
+    <script>
+      $(document).ready(function () {
+        $("#flip").click(function () {
+          $("#panel").slideToggle("slow");
+        });
+      });
+    </script>
+
+    <!--animation -->
+    <script>
+      $(document).ready(function () {
+        $("#butanim").click(function () {
+          $(".animationbox").animate({ left: "250px" });
+        });
+      });
+    </script>
+
+    <!--chaining -->
+
+    <script>
+      $(document).ready(function () {
+        $("#chaining").click(function () {
+          $("#p1").css("color", "red").slideUp(2000).slideDown(2000);
+        });
+      });
+    </script>
+
+    <!--text and html  -->
+
+    <script>
+      $(document).ready(function () {
+        $("#btn1").click(function () {
+          alert("Text: " + $("#test").text());
+        });
+        $("#btn2").click(function () {
+          alert("HTML: " + $("#test").html());
+        });
+      });
+    </script>
+
+    <!--mouseup and mousedown  -->
+    <script>
+      $(document).ready(function () {
+        $("#mouseup").mouseup(function () {
+          $(this).after("<p style='color:green;'>Mouse button released.</p>");
+        });
+        $("#mouseup").mousedown(function () {
+          $(this).after(
+            "<p style='color:purple;'>Mouse button pressed down.</p>"
+          );
+        });
+      });
+    </script>
+
+    <!--Append and remove -->
+
+    <script>
+      $(document).ready(function () {
+        $("#Appendss").click(function () {
+          $("li").append(" <li>Appended item</li>");
+        });
+        $("#removess").click(function () {
+          $("li").remove();
+        });
+      });
+    </script>
+
+    <!--add css class -->
+
+    <script>
+      $(document).ready(function () {
+        $("#addclassbtn").click(function () {
+          $("#addclassp").addClass("blue");
+        });
+      });
+    </script>
+
+    <!--ON Event  -->
+
+    <script>
+      $(document).ready(function () {
+        $("#onBtn").on({
+          click: function () {
+            console.log("Click button");
+          },
+
+          mouseleave: function () {
+            console.log("mouse leave");
+          },
+        });
+      });
+    </script>
+
+    <!--Ajax Get  -->
+
+    <script>
+      $(document).ready(function () {
+        $("#ajaxgetBtn").click(function () {
+          $.get(
+            "	https://dummy.restapiexample.com/api/v1/employee/1",
+            function (data, status) {
+              alert(status);
+              console.log(status);
+            }
+          );
+        });
+
+        //ajaxpostBtn
+        $("#ajaxpostBtn").click(function () {
+          $.post(
+            "https://dummyjson.com/users/add",
+            {
+              firstName: "Temp",
+              lastName: "Temp",
+              age: 50,
+            },
+            function (data, status) {
+              alert(status);
+              console.log(data + status);
+            }
+          );
+        });
+      });
+    </script>
+
+    <!-- Array  -->
+
+    <script>
+      $(document).ready(function () {
+        $("#arrayBtn").click(function () {
+          var arr = ["A", "B", "C", "D", "E"];
+          jQuery.each(arr, function (index, value) {
+            console.log("index", index, "value", value);
+          });
+        });
+      });
+    </script>
+
+    <!--Asynchronous programming with callbacks.-->
+    <script>
+      $(document).ready(function () {
+        $("#asynccallBtn").click(function () {
+          function getData() {
+            let myDate;
+            for (let i = 0; i < 1000000; i++) {
+              const date = new Date();
+              myDate = date;
+            }
+
+            console.log(myDate);
+          }
+          getData();
+          console.log("second");
+          console.log("third");
+        });
+      });
+    </script>
+
+    <style>
+      #panel,
+      #flip {
+        padding: 5px;
+        text-align: center;
+        background-color: #e5eecc;
+        border: solid 1px #c3c3c3;
+      }
+
+      #panel {
+        padding: 50px;
+        display: none;
+      }
+      .blue {
+        color: red;
+      }
+    </style>
+  </head>
+
+  <body>
+    <p>This is a paragraph.</p>
+
+    <button id="hide">Hide</button>
+    <button id="show">Show</button>
+    <br /><br /><br />
+
+    <!--Call back function -->
+    <button id="callbackfunc">Hide Callback function</button>
+
+    <p id="parcall">This is a paragraph for call back function</p>
+
+    <!--side up toggle -->
+
+    <div id="flip">Click to slide the panel down or up</div>
+    <div id="panel">Hello world!</div>
+
+    <br />
+    <!--animation -->
+    <button id="butanim">Start Animation</button><br />
+    <br />
+    <br />
+    <div
+      class="animationbox"
+      style="
+        background: #98bf21;
+        height: 100px;
+        width: 100px;
+        position: absolute;
+      "
+    ></div>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br /><br />
+    <br />
+    <br />
+    <!--chaining -->
+    <p id="p1">jQuery is chaining!!</p>
+    <br />
+
+    <button id="chaining">chaining</button>
+    <br />
+    <br />
+    <br />
+    <!--text and html  -->
+    <button id="btn1">Show Text</button>
+    <button id="btn2">Show HTML</button>
+    <p id="test">This is some <b>bold</b> text in a paragraph.</p>
+    <!--mouseup and mousedown  -->
+    <button id="mouseup">mouseup mousedown</button>
+
+    <!--Append and remove -->
+
+    <ol>
+      <li>List item 1</li>
+      <li>List item 2</li>
+      <li>List item 3</li>
+    </ol>
+
+    <button id="Appendss">Append list items</button>
+    <button id="removess">remove list items</button>
+
+    <!--add css class -->
+    <button id="addclassbtn">Add Class css</button>
+    <p id="addclassp">This is some <b>bold</b> text in a paragraph.</p>
+
+    <!--ON -->
+    <button id="onBtn">ON Btn</button>
+
+    <br />
+    <br />
+    <br />
+    <!--Ajax-->
+    <button id="ajaxgetBtn">Get value Ajax</button>
+    <br />
+    <br />
+    <br />
+
+    <button id="ajaxpostBtn">Post value Ajax</button>
+    <br />
+    <br />
+    <br />
+
+    <!--Array-->
+    <button id="arrayBtn">print Array on console</button>
+
+    <!--Asynchronous programming with callbacks.-->
+
+    <button id="asynccallBtn">Asynchronous programming with callbacks</button>
+  </body>
+</html>
