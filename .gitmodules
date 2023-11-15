@@ -1,0 +1,3 @@
+[submodule "tictactoe"]
+	path = tictactoe
+	url = https://github.com/yelynn1/tictactoe.git
